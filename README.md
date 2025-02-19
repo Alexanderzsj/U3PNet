@@ -26,8 +26,3 @@ U3PNet: Enhancing Image Fusion through Spatial-Spectral Network with Prompt Tuni
 python main.py 
 ```
 
-
-
-## Contact
-
-If you have any questions or suggestions, please submit an Issue or send a email to [shengjie24@mails.jlu.edu.cn](mailto:shengjie24@mails.jlu.edu.cn).
