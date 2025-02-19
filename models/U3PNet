@@ -149,28 +149,6 @@ class DoubleConv(nn.Module):  # 使用深度可分离卷积
         return self.double_conv(x)
 
 
-"""
-class DoubleConv(nn.Module):  # 这里直接使用了双卷积，可以用来做对比消融实验
-    # (convolution => [BN] => ReLU) * 2
-
-    def __init__(self, in_channels, out_channels, mid_channels=None):
-        super().__init__()
-        if not mid_channels:
-            mid_channels = out_channels
-        self.double_conv = nn.Sequential(
-            nn.Conv2d(in_channels, mid_channels, kernel_size=3, padding=1, stride=1, bias=False),
-            # nn.BatchNorm2d(mid_channels),
-            nn.LeakyReLU(inplace=True),
-            nn.Conv2d(mid_channels, out_channels, kernel_size=3, padding=1, stride=1, bias=False),
-            # nn.BatchNorm2d(out_channels),
-            nn.LeakyReLU(inplace=True)
-        )
-
-    def forward(self, x):
-        return self.double_conv(x)
-"""
-
-
 class ResBlock(nn.Module):
     def __init__(self, in_channels, out_channels):
         super(ResBlock, self).__init__()
